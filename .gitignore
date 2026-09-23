@@ -1,0 +1,35 @@
+# Quartus Project Generated Files
+db/
+incremental_db/
+output_files/
+simulation/
+
+# Backup files
+*.bak
+*.bak2
+
+# Quartus Settings / Workspace files
+*.qws
+*.rpt
+*.done
+*.summary
+*.pin
+*.smsg
+*.jdi
+*.sof
+*.pof
+*.rbf
+*.ekp
+*.map
+*.tan
+*.fit
+*.asm
+
+# Simulation outputs
+*.vcd
+*.wlf
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
