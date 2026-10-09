@@ -1,12 +1,10 @@
-# RTL Design Portfolio — AHB-to-APB Bridge & Intel 4004 Datapath
+# AHB-to-APB Bridge RTL Design
 
-A collection of synthesizable RTL designs written in Verilog, built and verified using **Intel Quartus Prime** and standard simulation tools.
+A synthesizable AMBA-compliant bus bridge RTL design written in Verilog, built and verified using **Intel Quartus Prime** and standard simulation tools.
 
 ---
 
-## 📦 Projects
-
-### 1. AHB-to-APB Bridge
+## 📦 Project Overview
 
 An AMBA-compliant bus bridge that translates AHB (Advanced High-performance Bus) transactions to APB (Advanced Peripheral Bus) protocol — a fundamental building block in ARM-based SoC designs.
 
@@ -59,30 +57,6 @@ IDLE ──(valid & write)──► WAIT ──(valid)──► WRITEP ──►
 
 ---
 
-### 2. Intel 4004 Datapath
-
-A synthesizable RTL model of the **datapath** of the Intel 4004 — the world's first commercially available microprocessor (1971). This design is controlled by external control signals (mimicking what a separate Control Unit would drive).
-
-**Implemented Datapath Components:**
-
-| Component | Width | Description |
-|-----------|-------|-------------|
-| Bi-directional Data Bus Buffer | 4-bit | Tri-state driver for external `D0–D3` pins |
-| Instruction Register | 8-bit | Serial shift-in (4 bits/cycle) from internal bus |
-| Accumulator | 4-bit | Destination register for all ALU operations |
-| Temp Register | 4-bit | ALU source operand register |
-| ALU | 4-bit | ADD, SUB, AND, OR, NOT operations |
-| Scratch Pad | 16 × 4-bit | General-purpose register file (Index Registers R0–R15) |
-| Address Stack | 4 × 12-bit | 3-level subroutine call stack + Program Counter |
-
-**File:**
-
-| File | Description |
-|------|-------------|
-| [`intel_4004_datapath.v`](intel_4004_datapath.v) | Complete synthesizable datapath — all components + internal bus routing |
-
----
-
 ## 🛠 Tools Used
 
 - **Intel Quartus Prime** — Synthesis & implementation
@@ -96,7 +70,4 @@ A synthesizable RTL model of the **datapath** of the Intel 4004 — the world's 
 - AMBA AHB/APB protocol implementation
 - Finite State Machine (FSM) design with registered outputs
 - Pipelined bus interfaces
-- Tri-state bus drivers
-- Register file design
-- Stack-based program counter
 - Synthesizable RTL coding style
